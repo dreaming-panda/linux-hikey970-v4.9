@@ -1,0 +1,18 @@
+menu "Hisilicon platform"
+
+menuconfig HISILICON_PLATFORM
+	bool "Hisilicon platform support"
+	default n
+	help
+	  Say yes here to support the hisilicon platform
+
+if HISILICON_PLATFORM
+
+source "drivers/hisi/mailbox/Kconfig"
+source "drivers/hisi/hifi_dsp/Kconfig"
+source "drivers/hisi/hifi_mailbox/Kconfig"
+source "drivers/hisi/ics/Kconfig"
+
+endif #HISILICON_PLATFORM
+
+endmenu
